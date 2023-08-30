@@ -8,15 +8,111 @@ body{
     --darkslate: hsl(234, 29%, 20%);
     --grey: hsl(231, 7%, 60%);
     --white: hsl(0, 0%, 100%);
-    
 }
 
-
 @font-face {
-    font-family: poppinsBold;
+    font-family: robotoBold;
     src: url("../assets/fonts/Roboto-Bold.ttf");
 }
 @font-face {
-    font-family: poppinsBoldItalic;
+    font-family: robotoRegular;
     src: url("../assets/fonts/Roboto-Regular.ttf");
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--darkslate);
+    height: 100vh;
+}
+.wrapper{
+    width: 900px;
+    height: auto;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border-radius: 20px;
+    margin: auto;
+    padding: 20px;
+    color: var(--darkslate);
+}
+.right_div{
+    width: 50%;
+    border: 1px solid lime;
+    height: 100%;
+}
+.left_div{
+    width: 50%;
+    height: 100%; 
+    padding: 20px;
+}
+.form_wrapper{
+    align-items: flex-start;
+}
+h2{
+    font-family: robotoBold;
+    font-size: 42px;
+    font-weight: 700;
+}
+p{
+    font-size: 16px;
+    font-family: robotoRegular;
+    font-weight: 700;
+
+}
+.text_wrapper{
+    display: flex;
+    margin: 1rem;
+}
+.text_wrapper p{
+    padding: 0;
+    margin: 0;
+}
+.icon{
+    margin-right: 10px;
+}
+form{
+    margin-top: 30px;
+}
+.email_label{
+    font-size: 14px;
+    display: block;
+    padding: 0;
+    background: lime;
+    text-align: start;
+    font-family: robotoRegular;
+    font-weight: 700;
+    color: var(--darkslate);
+    margin: 8px;
+}
+input{
+    width: 100%;
+    border: 0.5px solid var(--grey);
+    padding: 20px;
+    border-radius: 8px;
+    appearance: none;
+    outline: none;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: var(--grey);
+    font-weight: 400;
+    font-family: robotoRegular;
+}
+button{
+    width: 100%;
+    background: var(--darkslate);
+    border-radius: 8px;
+    outline: none;
+    appearance: none;
+    padding: 20px;
+    color: var(--white);
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: robotoRegular;
+    font-weight: 700;
+    margin: 20px 0;
+    cursor: pointer;
 }
