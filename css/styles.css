@@ -32,7 +32,7 @@ body{
     background: var(--white);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     border-radius: 20px;
     margin: auto;
     padding: 20px;
@@ -50,9 +50,7 @@ body{
 }
 .left_div{
     width: 50%;
-    height: 100%; 
     padding: 0 20px ;
-    /* height: auto; */
 }
 .form_wrapper{
     align-items: flex-start;
