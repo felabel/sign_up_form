@@ -32,8 +32,7 @@ body{
     background: var(--white);
     display: flex;
     align-items: center;
-    align-content: center;
-    justify-content: center;
+    justify-content: space-between;
     border-radius: 20px;
     margin: auto;
     padding: 20px;
@@ -41,13 +40,19 @@ body{
 }
 .right_div{
     width: 50%;
-    border: 1px solid lime;
-    height: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+.mobile{
+    display: none;
 }
 .left_div{
     width: 50%;
     height: 100%; 
-    padding: 20px;
+    padding: 0 20px ;
+    /* height: auto; */
 }
 .form_wrapper{
     align-items: flex-start;
@@ -65,7 +70,7 @@ p{
 }
 .text_wrapper{
     display: flex;
-    margin: 1rem;
+    margin: 1rem 0;
 }
 .text_wrapper p{
     padding: 0;
@@ -81,12 +86,11 @@ form{
     font-size: 14px;
     display: block;
     padding: 0;
-    background: lime;
     text-align: start;
     font-family: robotoRegular;
     font-weight: 700;
     color: var(--darkslate);
-    margin: 8px;
+    margin: 8px 0;
 }
 input{
     width: 100%;
@@ -113,6 +117,44 @@ button{
     font-size: 16px;
     font-family: robotoRegular;
     font-weight: 700;
-    margin: 20px 0;
+    margin: 25px 0;
     cursor: pointer;
+    border: 0;
 }
+button:focus{
+    outline: none;
+    background: rgb(246,79,117);
+    box-shadow: 10px 10px 5px -3px rgba(0,0,0,0.52);
+-webkit-box-shadow: 10px 10px 5px -3px rgba(0,0,0,0.52);
+-moz-box-shadow: 10px 10px 5px -3px rgba(0,0,0,0.52);
+background: linear-gradient(90deg, rgba(246,79,117,1) 0%, rgba(246,79,117,1) 35%, rgba(255,102,71,1) 100%);
+}
+
+@media (max-width: 920px) {
+    .wrapper{
+        flex-direction: column-reverse;
+        width: 100%;
+        padding: 0;
+        border-radius: 0;
+        overflow-x: hidden;
+        height: 100%;
+    }
+    .left_div{
+        width: 100%;
+        padding: 20px;
+    }
+    .right_div{
+        width: 100%;
+        height: auto;
+    }
+    .mobile{
+        display: block;
+    }
+    .desktop{
+        display: none;
+    }
+    .form_wrapper{
+        margin: 0px 30px;
+    }
+}
+
